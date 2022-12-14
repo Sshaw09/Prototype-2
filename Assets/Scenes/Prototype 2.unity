@@ -348,6 +348,7 @@ MonoBehaviour:
   - {fileID: 7291167191281018043, guid: fcb820c2d8c744cceb1667efa535bed1, type: 3}
   - {fileID: 4311865277499420954, guid: 8966a4fd87b2f403db61c1ab9d42b4e5, type: 3}
   - {fileID: 7452968098228188952, guid: f3efc0c3e7e924f65af67ca58964c6d0, type: 3}
+  spawnInterval: 1
 --- !u!4 &461414016
 Transform:
   m_ObjectHideFlags: 0
