@@ -7,8 +7,11 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
 
     public float horizontalInput;
+    private float forwardInput;
     public float speed = 15.5f;
     public float xRange = 10.0f;
+    public float bottomRange = -2f;
+    public float topRange = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +32,18 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        //Movement on the Z axis, horizontal (Left/Right)
+        if (transform.position.z < bottomRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, bottomRange);
+        }
+
+        //Movement on the Z axis, Horizontal (Left/Right)
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+        //Movement on the Z axis, Vertical (Up/Down)
+        forwardInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
 
         //Makes so that when you click the space bar, the bone shoots out the character forward via the Z axis
         if (Input.GetKeyDown(KeyCode.Space))

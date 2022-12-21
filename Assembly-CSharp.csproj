@@ -71,9 +71,13 @@
     <Compile Include="Assets\Challenge 2\Scripts\SpawnManagerX.cs" />
     <Compile Include="Assets\Scripts\DestroyOfOutBounds.cs" />
     <Compile Include="Assets\Scripts\DetectCollisions.cs" />
+    <Compile Include="Assets\Scripts\LeftSpawnManager1.cs" />
     <Compile Include="Assets\Scripts\MoveForward.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerDebug.cs" />
+    <Compile Include="Assets\Scripts\RigthSpawnManager.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>/Users/stephenshaw/Documents/GitHub/Prototype-2/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
