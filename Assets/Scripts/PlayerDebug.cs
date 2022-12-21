@@ -7,13 +7,11 @@ public class PlayerDebug : MonoBehaviour
     // The tag of the object that we want to log a message when we collide with
     public string targetTag = "Player";
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        // Check if the collision object has the target tag
-        if (collision.gameObject.tag == targetTag)
+        if (gameObject.tag == targetTag)
         {
-            // Log the message to the debug console
-            Debug.Log("Animal has hit the player");
+            Debug.Log("Player has been hit");
         }
     }
 }
