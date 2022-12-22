@@ -19,8 +19,17 @@ public class DetectCollisions : MonoBehaviour
     //Makes it so that the animals and the bone get destroyed when they hit eachother. Need Collider & Rigidbody
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player has been hit");
+
+        }
+        else
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+       
 
     }
 }

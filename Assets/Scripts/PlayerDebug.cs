@@ -9,9 +9,10 @@ public class PlayerDebug : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == targetTag)
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player has been hit");
+
         }
     }
 }
